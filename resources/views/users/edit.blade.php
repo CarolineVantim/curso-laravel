@@ -21,17 +21,7 @@
 
     <!--- Uma forma de ser feito <input type="hidden" name="_method" value="PUT"> -->
     @method('PUT')
-    @csrf
-    <label for="">Nome</label>
-    <input type="text" name="name" placeholder="Insira seu nome" value="{{ $user->name}}">
-    
-    <label for="">E-mail</label>
-    <input type="email" name="email" placeholder="Insira seu email " value="{{ $user->email }}">
-
-    <label for="">Senha</label>
-    <input type="password" name="password" placeholder="Insira sua senha">
-
-    <button type="submit">Salvar</button>
+    @include('users._partials.form')
 </form>
     
 @endsection
